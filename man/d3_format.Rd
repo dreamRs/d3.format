@@ -4,11 +4,14 @@
 \alias{d3_format}
 \title{d3.format}
 \usage{
-d3_format(specifier)
+d3_format(specifier, locale = "en-US")
 }
 \arguments{
 \item{specifier}{A specifier to format value(s),
 see \url{https://github.com/d3/d3-format#format} for details.}
+
+\item{locale}{Locale to use, for example \code{"fr-FR"} for french,
+see possible values here: \url{https://github.com/d3/d3-format/tree/master/locale}.}
 }
 \value{
 a character vector
