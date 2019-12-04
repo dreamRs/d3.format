@@ -1,0 +1,15 @@
+Package: d3.format
+Title: Interface to 'd3.format' JavaScript Library
+Version: 0.0.0.9000
+Authors@R: c(
+  person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
+  person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
+  person("Mike", "Bostock", role = "cph", comment = "d3.format library"))
+Description: What the package does (one paragraph).
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    V8,
+    htmltools
+RoxygenNote: 7.0.1
