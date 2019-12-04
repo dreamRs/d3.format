@@ -1,2 +1,4 @@
 ^d3\.format\.Rproj$
 ^\.Rproj\.user$
+^examples$
+^\.V8history$
