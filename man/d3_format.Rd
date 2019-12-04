@@ -2,9 +2,12 @@
 % Please edit documentation in R/d3_format.R
 \name{d3_format}
 \alias{d3_format}
+\alias{d3.format}
 \title{d3.format}
 \usage{
 d3_format(specifier, locale = "en-US")
+
+d3.format(specifier, locale = "en-US")
 }
 \arguments{
 \item{specifier}{A specifier to format value(s),

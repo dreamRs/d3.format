@@ -21,3 +21,9 @@ d3_format <- function(specifier, locale = "en-US") {
     ctx$call(fun = "applyFormat", specifier, list1(x), locale)
   }
 }
+
+#' @export
+#' @aliases d3_format
+#' @rdname d3_format
+d3.format <- d3_format
+
