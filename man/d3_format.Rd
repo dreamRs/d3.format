@@ -5,13 +5,17 @@
 \alias{d3.format}
 \title{d3.format}
 \usage{
-d3_format(specifier, locale = "en-US")
+d3_format(specifier, prefix = "", suffix = "", locale = "en-US")
 
-d3.format(specifier, locale = "en-US")
+d3.format(specifier, prefix = "", suffix = "", locale = "en-US")
 }
 \arguments{
 \item{specifier}{A specifier to format value(s),
 see \url{https://github.com/d3/d3-format#format} for details.}
+
+\item{prefix}{Character string to append before formatted value.}
+
+\item{suffix}{Character string to append after formatted value.}
 
 \item{locale}{Locale to use, for example \code{"fr-FR"} for french,
 see possible values here: \url{https://github.com/d3/d3-format/tree/master/locale}.}

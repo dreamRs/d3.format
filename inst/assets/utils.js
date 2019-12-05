@@ -1,11 +1,11 @@
 
-function applyFormat(format, vector, definition) {
+function applyFormat(specifier, vector, prefix, suffix, definition) {
   var locale = d3.formatLocale(definition);
   return vector.map(x => {
     if (x == "NA") {
       return null;
     } else {
-      return locale.format(format)(x);
+      return prefix + locale.format(specifier)(x) + suffix;
     }
   });
 }
