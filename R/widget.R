@@ -3,7 +3,7 @@
 d3_format_dependency <- function() {
   htmlDependency(
     name = "d3-format",
-    version = "1.4.2",
+    version = "1.4.2.1",
     src = c(file = "assets"),
     package = "d3.format",
     script = c("d3-format/d3-format.min.js", "utils.js")

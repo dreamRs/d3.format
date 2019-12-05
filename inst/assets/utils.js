@@ -16,7 +16,7 @@ function widgetFormat(specifier, prefix, suffix, definition) {
     if (typeof x.value != "undefined") {
       val = x.value;
     } else {
-      val = value;
+      val = x;
     }
     var locale = d3.formatLocale(JSON.parse(definition));
     return prefix + locale.format(specifier)(val) + suffix;
