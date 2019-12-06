@@ -2,16 +2,68 @@
 % Please edit documentation in R/widget.R
 \name{use_d3_format}
 \alias{use_d3_format}
+\alias{d3_format_js}
 \title{Use d3.format with a htmlwidget}
 \usage{
 use_d3_format(widget)
+
+d3_format_js(specifier, prefix = "", suffix = "", locale = "en-US")
 }
 \arguments{
 \item{widget}{An object of type \code{htmlwidget}.}
+
+\item{specifier}{Format for numbers, currency, percentage, e.g. \code{".0\%"} for rounded percentage.
+See online documentation : \url{https://github.com/d3/d3-format}.}
+
+\item{prefix}{Character string to append before formatted value.}
+
+\item{suffix}{Character string to append after formatted value.}
+
+\item{locale}{Localization to use, for example \code{"fr-FR"} for french,
+see possible values here: \url{https://github.com/d3/d3-format/tree/master/locale}.}
 }
 \value{
 The same \code{htmlwidget} with an extra dependency.
+
+a \code{JS} function
 }
 \description{
-Use d3.format with a htmlwidget
+Format numbers in htmlwidgets with \href{https://github.com/d3/d3-format}{d3.format}.
+}
+\examples{
+library(d3.format)
+
+dat <- data.frame(
+  x = c("format", "numeric", "values", "with ease"),
+  y = c(1233172L, 1467863L, 1953877L, 1382088L)
+)
+
+
+# With highcharter
+library(highcharter)
+hchart(dat, mapping = hcaes(x, y), type = "column") \%>\%
+  use_d3_format() \%>\%
+  hc_yAxis(labels = list(
+    formatter = d3_format_js(",.3~s", suffix = " unit")
+  ))
+
+# with apexcharter
+library(apexcharter)
+apex(dat, aes(x, y), "column") \%>\%
+  use_d3_format() \%>\%
+  ax_yaxis(labels = list(
+    formatter =  d3_format_js("$.3~s", suffix = " unit")
+  ))
+
+
+# with echarts4r
+library(echarts4r)
+dat \%>\%
+  e_charts(x) \%>\%
+  use_d3_format() \%>\%
+  e_bar(y, name = "Serie 1") \%>\%
+  e_y_axis(
+    formatter = d3_format_js(",.3~s", suffix = " unit"),
+    offset = -10
+  )
 }

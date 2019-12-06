@@ -12,12 +12,14 @@ d3_format_dependency <- function() {
 
 #' Use d3.format with a htmlwidget
 #'
+#' @description Format numbers in htmlwidgets with \href{https://github.com/d3/d3-format}{d3.format}.
+#'
 #' @param widget An object of type \code{htmlwidget}.
 #'
 #' @return The same \code{htmlwidget} with an extra dependency.
 #' @export
 #'
-#' @examples
+#' @example examples/widget.R
 use_d3_format <- function(widget) {
   if (!inherits(x = widget, what = "htmlwidget")) {
     stop("use_d3_format must be used with an htmlwidget !")
@@ -30,8 +32,7 @@ use_d3_format <- function(widget) {
 }
 
 
-#' Format numbers in htmlwidgets
-#'
+
 #' @param specifier Format for numbers, currency, percentage, e.g. \code{".0\%"} for rounded percentage.
 #'  See online documentation : \url{https://github.com/d3/d3-format}.
 #' @param prefix Character string to append before formatted value.
@@ -41,8 +42,9 @@ use_d3_format <- function(widget) {
 #'
 #' @return a \code{JS} function
 #' @export
+#' @aliases use_d3_format
+#' @rdname use_d3_format
 #'
-# @examples
 d3_format_js <- function(specifier, prefix = "", suffix = "", locale = "en-US") {
   locale <- read_locale(locale, as_text = TRUE)
   js <- sprintf(

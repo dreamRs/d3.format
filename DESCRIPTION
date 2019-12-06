@@ -5,7 +5,7 @@ Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
   person("Mike", "Bostock", role = "cph", comment = "d3.format library"))
-Description: What the package does (one paragraph).
+Description: Format numbers for human consumption the same way in various 'htmlwidgets'.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -14,3 +14,7 @@ Imports:
     htmltools,
     jsonlite
 RoxygenNote: 7.0.1
+Suggests: 
+    highcharter,
+    apexcharter,
+    echarts4r
