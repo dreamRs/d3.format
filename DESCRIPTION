@@ -19,4 +19,5 @@ Suggests:
     apexcharter,
     billboarder,
     echarts4r,
+    ggplot2,
     testthat (>= 2.1.0)

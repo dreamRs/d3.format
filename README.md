@@ -8,7 +8,7 @@
 > the same way to format numbers in different htmlwidget packages such
 > as [highcharter](https://github.com/jbkunst/highcharter),
 > [apexcharter](https://github.com/dreamRs/apexcharter),
-> [highcharter](https://github.com/jbkunst/highcharter) and more.
+> [echarts4r](https://echarts4r.john-coene.com/) and more.
 
 <!-- badges: start -->
 
@@ -63,13 +63,15 @@ More examples [here](https://observablehq.com/@d3/d3-format).
 
 ## Format numbers on Htmlwidgets axis
 
+With [highcharter](https://github.com/jbkunst/highcharter) :
+
 ``` r
 library(d3.format)
 dat <- data.frame(
   x = c("format", "numeric", "values", "with ease"),
   y = c(1233172L, 1467863L, 1953877L, 1382088L)
 )
-# With highcharter
+
 library(highcharter)
 hchart(dat, mapping = hcaes(x, y), type = "column") %>%
   use_d3_format() %>%
@@ -80,8 +82,9 @@ hchart(dat, mapping = hcaes(x, y), type = "column") %>%
 
 ![](man/figures/highcharter.png)
 
+With [apexcharter](https://dreamrs.github.io/apexcharter/index.html) :
+
 ``` r
-# with apexcharter
 library(apexcharter)
 apex(dat, aes(x, y), "column") %>%
   use_d3_format() %>%
@@ -92,8 +95,9 @@ apex(dat, aes(x, y), "column") %>%
 
 ![](man/figures/apexcharter.png)
 
+With [billboarder](https://dreamrs.github.io/billboarder/index.html) :
+
 ``` r
-# With billboarder
 library(billboarder)
 billboarder(data = dat) %>%
   bb_aes(x = x, y = y) %>%
@@ -108,8 +112,9 @@ billboarder(data = dat) %>%
 
 ![](man/figures/billboarder.png)
 
+With [echarts4r](https://echarts4r.john-coene.com/) :
+
 ``` r
-# with echarts4r
 library(echarts4r)
 dat %>%
   e_charts(x) %>%
@@ -122,3 +127,14 @@ dat %>%
 ```
 
 ![](man/figures/echarts4r.png)
+
+You can also use it with [ggplot2](https://ggplot2.tidyverse.org/) :
+
+``` r
+library(ggplot2)
+ggplot(dat) + 
+  geom_col(aes(x, y)) + 
+  scale_y_continuous(labels = d3_format("$,.3~s"))
+```
+
+![](man/figures/ggplot2.png)

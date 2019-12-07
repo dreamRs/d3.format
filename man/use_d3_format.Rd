@@ -52,7 +52,7 @@ library(apexcharter)
 apex(dat, aes(x, y), "column") \%>\%
   use_d3_format() \%>\%
   ax_yaxis(labels = list(
-    formatter =  d3_format_js("$.3~s", suffix = " unit")
+    formatter =  d3_format_js(",.3~s", suffix = " unit")
   ))
 
 
@@ -64,7 +64,7 @@ billboarder(data = dat) \%>\%
   use_d3_format() \%>\%
   bb_y_axis(
     tick = list(
-      format = d3_format_js("$.3~s", suffix = " unit")
+      format = d3_format_js(",.3~s", suffix = " unit")
     )
   )
 
