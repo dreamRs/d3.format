@@ -17,4 +17,5 @@ RoxygenNote: 7.0.1
 Suggests: 
     highcharter,
     apexcharter,
+    billboarder,
     echarts4r

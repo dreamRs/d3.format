@@ -56,6 +56,18 @@ apex(dat, aes(x, y), "column") \%>\%
   ))
 
 
+# With billboarder
+library(billboarder)
+billboarder(data = dat) \%>\%
+  bb_aes(x = x, y = y) \%>\%
+  bb_barchart() \%>\%
+  use_d3_format() \%>\%
+  bb_y_axis(
+    tick = list(
+      format = d3_format_js("$.3~s", suffix = " unit")
+    )
+  )
+
 # with echarts4r
 library(echarts4r)
 dat \%>\%
