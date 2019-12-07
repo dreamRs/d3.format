@@ -10,7 +10,7 @@ path_locales_js <- function() {
   system.file("assets/d3-format/locale", package = "d3.format")
 }
 
-
+#' @importFrom V8 new_context
 get_context <- function() {
   if (!is.null(.globals$ctx)) {
     return(.globals$ctx)
@@ -41,6 +41,7 @@ check_locale <- function(x) {
   }
 }
 
+#' @importFrom jsonlite read_json
 read_locale <- function(locale, as_text = FALSE) {
   check_locale(locale)
   path <- file.path(path_locales_js(), paste0(locale, ".json"))

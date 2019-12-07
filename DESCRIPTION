@@ -18,4 +18,5 @@ Suggests:
     highcharter,
     apexcharter,
     billboarder,
-    echarts4r
+    echarts4r,
+    testthat (>= 2.1.0)
