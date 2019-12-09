@@ -3,3 +3,5 @@
 ^examples$
 ^\.V8history$
 ^README\.Rmd$
+^\.travis\.yml$
+^codecov\.yml$

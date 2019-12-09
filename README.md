@@ -14,6 +14,10 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/dreamRs/d3.format.svg?branch=master)](https://travis-ci.org/dreamRs/d3.format)
+[![Codecov test
+coverage](https://codecov.io/gh/dreamRs/d3.format/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/d3.format?branch=master)
 <!-- badges: end -->
 
 ## Installation
