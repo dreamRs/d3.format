@@ -1,6 +1,6 @@
 Package: d3.format
 Title: Interface to 'd3.format' JavaScript Library
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
@@ -13,7 +13,7 @@ Imports:
     V8,
     htmltools,
     jsonlite
-RoxygenNote: 7.0.1
+RoxygenNote: 7.0.2
 Suggests: 
     highcharter,
     apexcharter,
