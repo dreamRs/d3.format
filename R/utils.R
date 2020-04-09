@@ -31,25 +31,38 @@ list1 <- function (x) {
 }
 
 check_locale <- function(x) {
-  json <- list.files(path = path_locales_js())
-  njson <- gsub("\\.json", "", json)
-  if (!x %in% njson) {
-    stop(paste(
-      "Invalid locale, must be one of:",
-      paste(njson, collapse = ", ")
-    ), call. = FALSE)
+  if(is.character(x)){
+    json <- list.files(path = path_locales_js())
+    njson <- gsub("\\.json", "", json)
+    if (!x %in% njson) {
+      stop(paste(
+        "Invalid locale, must be one of:",
+        paste(njson, collapse = ", ")
+      ), call. = FALSE)
+    }
   }
 }
 
 #' @importFrom jsonlite read_json
 read_locale <- function(locale, as_text = FALSE) {
   check_locale(locale)
-  path <- file.path(path_locales_js(), paste0(locale, ".json"))
-  if (as_text) {
-    paste(readLines(con = path, encoding = "UTF-8"), collapse = "")
-  } else {
-    jsonlite::read_json(path = path)
+  if(is.character(locale)){
+    path <- file.path(path_locales_js(), paste0(locale, ".json"))
+    if (as_text) {
+      locale <- paste(readLines(con = path, encoding = "UTF-8"), collapse = "")
+    } else {
+      locale <- jsonlite::read_json(path = path)
+    }
   }
+  if(is.list(locale)){
+    default_locale <- read_default_locale()
+    locale <- modifyList(default_locale, locale)
+  }
+  locale
 }
 
+read_default_locale <- function(){
+  path <- file.path(path_locales_js(), "en-US.json")
+  jsonlite::read_json(path = path)
+}
 
