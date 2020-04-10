@@ -1,9 +1,10 @@
 Package: d3.format
 Title: Interface to 'd3.format' JavaScript Library
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
-  person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
+  person("Fanny", "Meyer", role = "aut"),
+  person("Juan Pablo", "Marin Diaz", role = "ctb"),
   person("Mike", "Bostock", role = "cph", comment = "d3.format library"))
 Description: Format numbers for human consumption the same way in various 'htmlwidgets'.
 License: GPL-3
@@ -13,7 +14,7 @@ Imports:
     V8,
     htmltools,
     jsonlite
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Suggests: 
     highcharter,
     apexcharter,

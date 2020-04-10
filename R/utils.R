@@ -44,9 +44,10 @@ check_locale <- function(x) {
 }
 
 #' @importFrom jsonlite read_json
+#' @importFrom utils modifyList
 read_locale <- function(locale, as_text = FALSE) {
   check_locale(locale)
-  if(is.character(locale)){
+  if (is.character(locale)) {
     path <- file.path(path_locales_js(), paste0(locale, ".json"))
     if (as_text) {
       locale <- paste(readLines(con = path, encoding = "UTF-8"), collapse = "")
@@ -54,7 +55,7 @@ read_locale <- function(locale, as_text = FALSE) {
       locale <- jsonlite::read_json(path = path)
     }
   }
-  if(is.list(locale)){
+  if (is.list(locale)) {
     default_locale <- read_default_locale()
     locale <- modifyList(default_locale, locale)
   }
