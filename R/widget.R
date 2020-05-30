@@ -1,9 +1,39 @@
 
+#' @title HTML dependency for d3.format
+#'
+#' @description This can be used to add a dependency in \code{htmlwidget}
+#'  but also to load d3.format in shiny applications or RMarkdown
+#'
+#' @return an \code{\link[htmltools]{htmlDependency}} object.
+#' @export
+#'
 #' @importFrom htmltools htmlDependency
-d3_format_dependency <- function() {
+#'
+#' @examples
+#' # This will return an HTML dependency
+#' html_dependency_d3format()
+#' # Using it in shiny or markdown will allow
+#' # to use d3.format JavaScript API
+#'
+#' \dontrun{
+#'
+#' # when autoring htmlwidgets, you can
+#' # add the dependency in createWidget:
+#'
+#' createWidget(
+#'   name = "mywidget",
+#'   x = x,
+#'   dependencies = list(
+#'     html_dependency_d3format()
+#'   )
+#' )
+#'
+#' }
+#'
+html_dependency_d3format <- function() {
   htmlDependency(
     name = "d3-format",
-    version = "1.4.2.1",
+    version = "1.4.4",
     src = c(file = "assets"),
     package = "d3.format",
     script = c("d3-format/d3-format.min.js", "utils.js"),
@@ -27,7 +57,7 @@ use_d3_format <- function(widget) {
   }
   widget$dependencies <- c(
     widget$dependencies,
-    list(d3_format_dependency())
+    list(html_dependency_d3format())
   )
   widget
 }

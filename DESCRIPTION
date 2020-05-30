@@ -1,6 +1,6 @@
 Package: d3.format
-Title: Interface to 'd3.format' JavaScript Library
-Version: 0.1.1
+Title: Interface to 'd3.format' 'JavaScript' Library
+Version: 0.1.2
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre", "cph")),
   person("Fanny", "Meyer", role = "aut"),

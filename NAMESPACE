@@ -3,6 +3,7 @@
 export(d3.format)
 export(d3_format)
 export(d3_format_js)
+export(html_dependency_d3format)
 export(use_d3_format)
 importFrom(V8,new_context)
 importFrom(htmltools,htmlDependency)
