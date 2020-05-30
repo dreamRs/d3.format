@@ -13,9 +13,9 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build
-status](https://travis-ci.org/dreamRs/d3.format.svg?branch=master)](https://travis-ci.org/dreamRs/d3.format)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![R build
+status](https://github.com/dreamRs/d3.format/workflows/R-CMD-check/badge.svg)](https://github.com/dreamRs/d3.format/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/dreamRs/d3.format/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/d3.format?branch=master)
 <!-- badges: end -->

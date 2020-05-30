@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
 > Interface to [d3.format](https://github.com/d3/d3-format) JavaScript library to format numbers for human consumption. The goal is to use the same way to format numbers in different htmlwidget packages such as [highcharter](https://github.com/jbkunst/highcharter), [apexcharter](https://github.com/dreamRs/apexcharter), [echarts4r](https://echarts4r.john-coene.com/) and more.
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.org/dreamRs/d3.format.svg?branch=master)](https://travis-ci.org/dreamRs/d3.format)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![R build status](https://github.com/dreamRs/d3.format/workflows/R-CMD-check/badge.svg)](https://github.com/dreamRs/d3.format/actions)
 [![Codecov test coverage](https://codecov.io/gh/dreamRs/d3.format/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/d3.format?branch=master)
 <!-- badges: end -->
 
