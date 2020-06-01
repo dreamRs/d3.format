@@ -76,7 +76,7 @@ use_d3_format <- function(widget) {
 #' @aliases use_d3_format
 #' @rdname use_d3_format
 #'
-d3_format_js <- function(specifier, prefix = "", suffix = "", locale = "en-US") {
+d3_formatter <- function(specifier, prefix = "", suffix = "", locale = "en-US") {
   locale <- read_locale(locale, as_text = TRUE)
   js <- sprintf(
     "widgetFormat('%s', '%s', '%s', '%s');",

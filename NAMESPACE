@@ -2,7 +2,7 @@
 
 export(d3.format)
 export(d3_format)
-export(d3_format_js)
+export(d3_formatter)
 export(html_dependency_d3format)
 export(use_d3_format)
 importFrom(V8,new_context)

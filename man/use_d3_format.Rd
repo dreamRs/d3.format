@@ -2,12 +2,12 @@
 % Please edit documentation in R/widget.R
 \name{use_d3_format}
 \alias{use_d3_format}
-\alias{d3_format_js}
+\alias{d3_formatter}
 \title{Use d3.format with a htmlwidget}
 \usage{
 use_d3_format(widget)
 
-d3_format_js(specifier, prefix = "", suffix = "", locale = "en-US")
+d3_formatter(specifier, prefix = "", suffix = "", locale = "en-US")
 }
 \arguments{
 \item{widget}{An object of type \code{htmlwidget}.}
@@ -44,7 +44,7 @@ library(highcharter)
 hchart(dat, mapping = hcaes(x, y), type = "column") \%>\%
   use_d3_format() \%>\%
   hc_yAxis(labels = list(
-    formatter = d3_format_js(",.3~s", suffix = " unit")
+    formatter = d3_formatter(",.3~s", suffix = " unit")
   ))
 
 # with apexcharter
@@ -52,7 +52,7 @@ library(apexcharter)
 apex(dat, aes(x, y), "column") \%>\%
   use_d3_format() \%>\%
   ax_yaxis(labels = list(
-    formatter =  d3_format_js(",.3~s", suffix = " unit")
+    formatter =  d3_formatter(",.3~s", suffix = " unit")
   ))
 
 
@@ -64,7 +64,7 @@ billboarder(data = dat) \%>\%
   use_d3_format() \%>\%
   bb_y_axis(
     tick = list(
-      format = d3_format_js(",.3~s", suffix = " unit")
+      format = d3_formatter(",.3~s", suffix = " unit")
     )
   )
 
@@ -75,7 +75,7 @@ dat \%>\%
   use_d3_format() \%>\%
   e_bar(y, name = "Serie 1") \%>\%
   e_y_axis(
-    formatter = d3_format_js(",.3~s", suffix = " unit"),
+    formatter = d3_formatter(",.3~s", suffix = " unit"),
     offset = -10
   )
 }

@@ -15,9 +15,9 @@ test_that("use_d3_format not a widget", {
 })
 
 
-test_that("d3_format_js works", {
+test_that("d3_formatter works", {
 
-  fmt <- d3_format_js(",")
+  fmt <- d3_formatter(",")
 
   expect_is(fmt, "character")
   expect_is(fmt, "JS_EVAL")

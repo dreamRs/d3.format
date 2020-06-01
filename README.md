@@ -80,7 +80,7 @@ library(highcharter)
 hchart(dat, mapping = hcaes(x, y), type = "column") %>%
   use_d3_format() %>%
   hc_yAxis(labels = list(
-    formatter = d3_format_js(",.3~s", suffix = " unit")
+    formatter = d3_formatter(",.3~s", suffix = " unit")
   ))
 ```
 
@@ -93,7 +93,7 @@ library(apexcharter)
 apex(dat, aes(x, y), "column") %>%
   use_d3_format() %>%
   ax_yaxis(labels = list(
-    formatter =  d3_format_js(",.3~s", suffix = " unit")
+    formatter =  d3_formatter(",.3~s", suffix = " unit")
   ))
 ```
 
@@ -109,7 +109,7 @@ billboarder(data = dat) %>%
   use_d3_format() %>%
   bb_y_axis(
     tick = list(
-      format = d3_format_js(",.3~s", suffix = " unit")
+      format = d3_formatter(",.3~s", suffix = " unit")
     )
   )
 ```
@@ -125,7 +125,7 @@ dat %>%
   use_d3_format() %>%
   e_bar(y, name = "Serie 1") %>%
   e_y_axis(
-    formatter = d3_format_js(",.3~s", suffix = " unit"),
+    formatter = d3_formatter(",.3~s", suffix = " unit"),
     offset = -10
   )
 ```
